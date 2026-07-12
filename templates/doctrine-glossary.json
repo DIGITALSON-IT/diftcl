@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "purpose": "Seed doctrine education notes for issue spotting. These are not legal advice and must be checked against controlling authority.",
+    "last_reviewed": "2026-05-31"
+  },
+  "doctrines": [
+    {
+      "id": "standing",
+      "terms": ["standing", "Article III standing"],
+      "plain_language": "Whether the party has the right to bring the claim in court.",
+      "research_questions": ["What injury is alleged?", "Is causation traceable to the defendant?", "Can the court redress the injury?"]
+    },
+    {
+      "id": "mootness",
+      "terms": ["mootness", "moot"],
+      "plain_language": "Whether a live controversy still exists.",
+      "research_questions": ["Has the requested relief already occurred?", "Does an exception apply?"]
+    },
+    {
+      "id": "ripeness",
+      "terms": ["ripeness", "ripe for review"],
+      "plain_language": "Whether the dispute is developed enough for court review.",
+      "research_questions": ["Is the harm concrete?", "Would delay or immediate review cause hardship?"]
+    },
+    {
+      "id": "claim-preclusion",
+      "terms": ["res judicata", "claim preclusion"],
+      "plain_language": "Whether a prior final judgment bars relitigation of a claim.",
+      "research_questions": ["Was there a final judgment?", "Are parties or privies the same?", "Is the claim the same transaction or nucleus of facts?"]
+    },
+    {
+      "id": "issue-preclusion",
+      "terms": ["collateral estoppel", "issue preclusion"],
+      "plain_language": "Whether a previously decided issue cannot be relitigated.",
+      "research_questions": ["Was the issue actually litigated?", "Was it necessary to the judgment?", "Was there a full and fair opportunity to litigate?"]
+    },
+    {
+      "id": "qualified-immunity",
+      "terms": ["qualified immunity"],
+      "plain_language": "A defense that can shield government officials from damages unless clearly established law was violated.",
+      "research_questions": ["What right was allegedly violated?", "Was the right clearly established at the time?", "What level of factual specificity controls in the jurisdiction?"]
+    },
+    {
+      "id": "sovereign-immunity",
+      "terms": ["sovereign immunity", "Eleventh Amendment immunity"],
+      "plain_language": "Immunity that may prevent suits against sovereign entities unless waived or abrogated.",
+      "research_questions": ["Who is the defendant?", "Is there waiver, abrogation, or Ex parte Young-style relief?"]
+    },
+    {
+      "id": "strict-scrutiny",
+      "terms": ["strict scrutiny"],
+      "plain_language": "A demanding constitutional review standard.",
+      "research_questions": ["What protected class or fundamental right triggers it?", "What compelling interest and narrow tailoring are asserted?"]
+    },
+    {
+      "id": "rational-basis",
+      "terms": ["rational basis", "rational basis review"],
+      "plain_language": "A deferential constitutional review standard.",
+      "research_questions": ["What legitimate government interest is asserted?", "What rational relationship is claimed?"]
+    },
+    {
+      "id": "burden-shifting",
+      "terms": ["burden shifting", "McDonnell Douglas"],
+      "plain_language": "A framework that shifts production burdens between parties.",
+      "research_questions": ["What prima facie elements apply?", "What legitimate reason is offered?", "What evidence supports pretext?"]
+    },
+    {
+      "id": "exhaustion",
+      "terms": ["exhaustion", "failure to exhaust", "administrative exhaustion"],
+      "plain_language": "Whether required administrative or procedural steps were completed before suit.",
+      "research_questions": ["What exhaustion source applies?", "Was it mandatory?", "Was exhaustion excused or unavailable?"]
+    },
+    {
+      "id": "statute-of-limitations",
+      "terms": ["statute of limitations", "limitations period", "time-barred"],
+      "plain_language": "A time limit for bringing a claim.",
+      "research_questions": ["What claim controls?", "When did accrual occur?", "Does tolling, discovery, or relation back apply?"]
+    },
+    {
+      "id": "irreparable-harm",
+      "terms": ["irreparable harm", "irreparable injury"],
+      "plain_language": "Harm that cannot be adequately remedied later by money damages or final relief.",
+      "research_questions": ["What harm is imminent?", "Why are legal remedies inadequate?", "What evidence supports the harm?"]
+    },
+    {
+      "id": "likelihood-of-success",
+      "terms": ["likelihood of success on the merits", "likely to succeed on the merits"],
+      "plain_language": "A merits showing often required for preliminary injunctive relief.",
+      "research_questions": ["Which claim is likely to succeed?", "What elements are supported?", "What defenses are strongest?"]
+    },
+    {
+      "id": "standard-of-review",
+      "terms": ["standard of review", "de novo", "abuse of discretion", "clear error"],
+      "plain_language": "The lens an appellate or reviewing court uses to evaluate a decision.",
+      "research_questions": ["What issue is being reviewed?", "Is it legal, factual, discretionary, or mixed?"]
+    }
+  ]
+}

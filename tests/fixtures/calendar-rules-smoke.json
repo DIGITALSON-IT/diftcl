@@ -1,0 +1,33 @@
+{
+  "jurisdiction": "smoke-test",
+  "court": "DIFTCL Fixture Court",
+  "source_url": "fixture://calendar-rules-smoke",
+  "source_retrieved": "2026-06-01",
+  "holidays": ["2026-06-19"],
+  "rules": [
+    {
+      "id": "response-after-service",
+      "label": "Response after service fixture",
+      "trigger": "service",
+      "days": 14,
+      "count": "calendar",
+      "direction": "after",
+      "roll": "next_business",
+      "include_trigger_day": false,
+      "authority": "Fixture rule",
+      "notes": "Regression fixture only."
+    },
+    {
+      "id": "business-days-before-hearing",
+      "label": "Business days before hearing fixture",
+      "trigger": "hearing",
+      "days": 5,
+      "count": "business",
+      "direction": "before",
+      "roll": "previous_business",
+      "include_trigger_day": false,
+      "authority": "Fixture rule",
+      "notes": "Regression fixture only."
+    }
+  ]
+}

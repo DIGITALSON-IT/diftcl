@@ -1,0 +1,4 @@
+interface:
+  display_name: "DIFTCL — Do It For The Case Law"
+  short_description: "Citation, quote, doctrine, deadline, and strategy review"
+  default_prompt: "Use $diftcl to extract case citations, statutes, rules, doctrines, validate CourtListener matches, check quotes, calculate configured deadlines, and produce education, strategy, review-packet, or TOA outputs."

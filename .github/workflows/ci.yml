@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main, development]
+  pull_request:
+
+jobs:
+  smoke:
+    name: Smoke (${{ matrix.os }}, py${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.9", "3.12"]
+        exclude:
+          # 3.9 is EOL on newer runner images; one old-Python leg on Linux is enough.
+          - os: windows-latest
+            python-version: "3.9"
+          - os: macos-latest
+            python-version: "3.9"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile check
+        run: python -m py_compile python/diftcl_citation_audit.py python/diftcl_shred.py python/run_regression_smoke.py
+      - name: Regression smoke suite
+        run: python python/run_regression_smoke.py --verbose
+      - name: Definition-of-Done commands
+        shell: bash
+        run: |
+          python python/diftcl_citation_audit.py --text "Brown v. Bd. of Educ., 347 U.S. 483, 495 (1954). Id. at 496." --output-format review
+          python python/diftcl_citation_audit.py --list-rule-sources --rule-source-query Minnesota
+          python python/diftcl_citation_audit.py --calendar-from 2026-06-01 --calendar-days 14 --calendar-holidays 2026-06-19
+          python python/diftcl_citation_audit.py --text "Brown v. Bd. of Educ., 347 U.S. 483, 495 (1954)." --strategy
+          python python/diftcl_citation_audit.py --text "42 U.S.C. § 1983 and qualified immunity" --educate

@@ -1,0 +1,45 @@
+# DIFTCL matter configuration.
+# Copy this to diftcl.yaml in the matter/workspace folder and adjust per filing.
+
+filing_court: ""
+jurisdiction: ""
+document_type: "brief"
+
+# Enable stricter review for filing-ready documents.
+strict: true
+require_parenthetical_court: false
+require_quote_pincites: true
+
+# Turn these on when credentials/source text are available.
+courtlistener: false
+verify_quotes: false
+quote_min_chars: 24
+
+# Local rules are user-directed. Provide a court ID from
+# references/court-rule-source-registry.json or a specific official rules URL.
+local_rules_enabled: false
+local_rules_court_id: ""
+local_rules_url: ""
+local_rules_cache_dir: ".diftcl-cache/local-rules"
+local_rules_cache_ttl_days: 30
+local_rules_max_requests: 3
+local_rules_retry_limit: 0
+local_rules_min_delay_seconds: 3
+
+# Deadline calculation is rule-driven. Use a matter-specific JSON file based on
+# templates/calendar-rules.json and populated from controlling rules/orders.
+calendar_enabled: false
+calendar_rules_file: ""
+calendar_holidays: []
+
+# Strategy/tactics review is an issue-spotting aid, not legal advice.
+strategy_enabled: false
+strategy_position: "neutral"
+strategy_objective: ""
+
+# Doctrine/statute education is issue spotting and source orientation.
+doctrine_education_enabled: false
+doctrine_glossary_file: ""
+
+# markdown, json, review, toa, calendar, strategy, authorities, or education.
+output_format: "review"

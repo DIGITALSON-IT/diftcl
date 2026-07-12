@@ -1,0 +1,22 @@
+{
+  "jurisdiction": "",
+  "court": "",
+  "source_url": "",
+  "source_retrieved": "",
+  "notes": "Template only. Populate from the controlling court rule, statute, scheduling order, or judge order before relying on deadline calculations.",
+  "holidays": [],
+  "rules": [
+    {
+      "id": "example-response-after-service",
+      "label": "Example response deadline after service",
+      "trigger": "service",
+      "days": 21,
+      "count": "calendar",
+      "direction": "after",
+      "roll": "next_business",
+      "include_trigger_day": false,
+      "authority": "",
+      "notes": "Replace with controlling jurisdiction-specific rule before use."
+    }
+  ]
+}

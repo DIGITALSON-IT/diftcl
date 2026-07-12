@@ -1,0 +1,165 @@
+[
+  {
+    "id": "case-json",
+    "args": ["--text", "Brown v. Bd. of Educ., 347 U.S. 483, 495 (1954).", "--json"],
+    "json_checks": [
+      ["citations.0.case_name", "Brown v. Bd. of Educ."],
+      ["citations.0.reporter", "U.S."],
+      ["citations.0.pincite", ", 495"]
+    ]
+  },
+  {
+    "id": "quote-verified",
+    "args": [
+      "--text",
+      "Brown v. Bd. of Educ., 347 U.S. 483, 495 (1954) \"separate educational facilities are inherently unequal\".",
+      "--source",
+      "tests/fixtures/source_brown.txt",
+      "--verify-quotes",
+      "--json"
+    ],
+    "json_checks": [
+      ["citations.0.nearby_quotes.0.status", "verified"]
+    ]
+  },
+  {
+    "id": "authorities-json",
+    "args": [
+      "--text",
+      "42 U.S.C. § 1983, 29 C.F.R. § 825.220, Fed. R. Civ. P. 12(b)(6), Minn. Stat. § 181.13, U.S. Const. amend. XIV, and qualified immunity.",
+      "--json"
+    ],
+    "contains": ["\"kind\": \"usc\"", "\"kind\": \"cfr\"", "\"kind\": \"federal_rule\"", "\"doctrine_id\": \"qualified-immunity\""]
+  },
+  {
+    "id": "calendar-rule-json",
+    "args": [
+      "--calendar-from",
+      "2026-06-01",
+      "--calendar-rules-file",
+      "tests/fixtures/calendar-rules-smoke.json",
+      "--calendar-rule",
+      "response-after-service",
+      "--json"
+    ],
+    "json_checks": [
+      ["calendar.deadline", "2026-06-15"],
+      ["calendar.status", "configured_rule"]
+    ]
+  },
+  {
+    "id": "local-rule-source-list",
+    "args": ["--list-rule-sources", "--rule-source-query", "Texas"],
+    "contains": ["Texas Judicial Branch", "Do not crawl all entries"]
+  },
+  {
+    "id": "review-short-form",
+    "args": ["--text", "Brown v. Bd. of Educ., 347 U.S. 483, 495 (1954). Id. at 496.", "--output-format", "review"],
+    "contains": ["Short Forms To Resolve", "Id. at 496"]
+  },
+  {
+    "id": "strategy-output",
+    "args": ["--text", "Brown v. Bd. of Educ., 347 U.S. 483, 495 (1954). 42 U.S.C. § 1983 and qualified immunity.", "--strategy"],
+    "contains": ["Strategy / Tactics / Contrarian Review", "Named doctrines need element-by-element support"]
+  },
+  {
+    "id": "education-output",
+    "args": ["--text", "42 U.S.C. § 1983 and qualified immunity require analysis of standing.", "--educate"],
+    "contains": ["Education Boundaries", "qualified immunity", "standing"]
+  },
+  {
+    "id": "toa-output",
+    "args": ["--text", "Brown v. Bd. of Educ., 347 U.S. 483, 495 (1954). Brown v. Bd. of Educ., 347 U.S. 483 (1954).", "--toa"],
+    "contains": ["Draft Table Of Authorities", "Brown v. Bd. of Educ."]
+  },
+  {
+    "id": "prose-leadin-case-name",
+    "args": ["--text", "As the Court explained in Brown v. Bd. of Educ., 347 U.S. 483, 495 (1954), schools matter.", "--json"],
+    "json_checks": [
+      ["citations.0.case_name", "Brown v. Bd. of Educ."],
+      ["citations.0.pincite", ", 495"]
+    ]
+  },
+  {
+    "id": "parallel-citation",
+    "args": ["--text", "Brown v. Bd. of Educ., 347 U.S. 483, 74 S. Ct. 686 (1954).", "--json"],
+    "json_checks": [
+      ["citations.0.parenthetical", "(1954)"],
+      ["citations.0.pincite", ""],
+      ["citations.0.findings", []]
+    ]
+  },
+  {
+    "id": "toa-grouping-prose",
+    "args": ["--text", "In Brown v. Bd. of Educ., 347 U.S. 483 (1954), x. Later in Brown v. Bd. of Educ., 347 U.S. 483 (1954), y.", "--json"],
+    "json_checks": [
+      ["table_of_authorities.0.case_name", "Brown v. Bd. of Educ."],
+      ["table_of_authorities.0.count", 2]
+    ]
+  },
+  {
+    "id": "missing-pincite-comma",
+    "args": ["--text", "Smith v. Jones, 347 U.S. 483 495 (1954).", "--json"],
+    "json_checks": [
+      ["citations.0.findings.0.code", "missing_pincite_comma"]
+    ]
+  },
+  {
+    "id": "supra-label",
+    "args": ["--text", "Brown v. Bd. of Educ., 347 U.S. 483, 495 (1954). Id. at 496. See also Roe, supra, at 113.", "--json"],
+    "json_checks": [
+      ["short_references.1.kind", "supra"],
+      ["short_references.1.text", "Roe, supra, at 113"]
+    ]
+  },
+  {
+    "id": "calendar-business-days-before",
+    "args": [
+      "--calendar-from",
+      "2026-06-15",
+      "--calendar-rules-file",
+      "tests/fixtures/calendar-rules-smoke.json",
+      "--calendar-rule",
+      "business-days-before-hearing",
+      "--json"
+    ],
+    "json_checks": [
+      ["calendar.deadline", "2026-06-08"],
+      ["calendar.rule.count", "business"]
+    ]
+  },
+  {
+    "id": "state-reporter-georgia",
+    "args": ["--text", "Lathrop v. Deal, 301 Ga. 408 (2017); Boyd v. Neal, 350 Ga. App. 274, 280 (2019).", "--json"],
+    "json_checks": [
+      ["citations.0.reporter", "Ga."],
+      ["citations.0.case_name", "Lathrop v. Deal"],
+      ["citations.1.reporter", "Ga. App."],
+      ["citations.1.pincite", ", 280"]
+    ]
+  },
+  {
+    "id": "spaced-us-reporter",
+    "args": ["--text", "Kolender v. Lawson, 461 U. S. 352, 357 (1983).", "--json"],
+    "json_checks": [
+      ["citations.0.reporter", "U. S."],
+      ["citations.0.case_name", "Kolender v. Lawson"],
+      ["citations.0.pincite", ", 357"]
+    ]
+  },
+  {
+    "id": "linewrapped-reporter",
+    "args": ["--text", "Fid. & Cas. Co. v. Whitehead, 114 Ga.\nApp. 630, 634 (1966).", "--json"],
+    "json_checks": [
+      ["citations.0.reporter", "Ga. App."],
+      ["citations.0.case_name", "Fid. & Cas. Co. v. Whitehead"],
+      ["citations.0.pincite", ", 634"]
+    ]
+  },
+  {
+    "id": "shred-dry-run",
+    "script": "diftcl_shred.py",
+    "args": ["tests/fixtures/source_brown.txt"],
+    "contains": ["DRY RUN", "WOULD SHRED", "source_brown.txt"]
+  }
+]

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "name": "DIFTCL court rule source registry",
+    "purpose": "Seed official court website sources for user-directed local rule population.",
+    "last_reviewed": "2026-05-31",
+    "use_policy": "Use as a directory only. Do not crawl all entries. Fetch only the court or rules URL selected by the user or matter config."
+  },
+  "federal_directories": [
+    {
+      "id": "us-courts-website-links",
+      "name": "U.S. Courts Court Website Links",
+      "url": "https://www.uscourts.gov/about-federal-courts/court-role-and-structure/court-website-links",
+      "scope": "Supreme Court, courts of appeals, district courts, bankruptcy courts, probation/pretrial, federal defenders"
+    },
+    {
+      "id": "us-courts-current-rules",
+      "name": "U.S. Courts Current Rules of Practice & Procedure",
+      "url": "https://www.uscourts.gov/forms-rules/current-rules-practice-procedure",
+      "scope": "National federal rules and explanation of federal local-rule publication"
+    },
+    {
+      "id": "doj-state-federal-court-resources",
+      "name": "DOJ State and Federal Court Resources",
+      "url": "https://www.justice.gov/jmd/ls/state",
+      "scope": "State-by-state court resources and federal court resource links"
+    },
+    {
+      "id": "ncacc-appellate-websites",
+      "name": "National Conference of Appellate Court Clerks Appellate Court Web Sites",
+      "url": "https://appellatecourtclerks.org/appellate-court-web-sites/",
+      "scope": "State, federal, territory, and selected tribal appellate court websites"
+    }
+  ],
+  "state_judiciary_portals": [
+    {"id": "al", "name": "Alabama Judicial System", "url": "https://judicial.alabama.gov/"},
+    {"id": "ak", "name": "Alaska Court System", "url": "https://courts.alaska.gov/"},
+    {"id": "az", "name": "Arizona Judicial Branch", "url": "https://www.azcourts.gov/"},
+    {"id": "ar", "name": "Arkansas Judiciary", "url": "https://www.arcourts.gov/"},
+    {"id": "ca", "name": "California Courts", "url": "https://courts.ca.gov/"},
+    {"id": "co", "name": "Colorado Judicial Branch", "url": "https://www.courts.state.co.us/"},
+    {"id": "ct", "name": "Connecticut Judicial Branch", "url": "https://www.jud.ct.gov/"},
+    {"id": "de", "name": "Delaware Courts", "url": "https://courts.delaware.gov/"},
+    {"id": "dc", "name": "District of Columbia Courts", "url": "https://www.dccourts.gov/"},
+    {"id": "fl", "name": "Florida Courts", "url": "https://www.flcourts.gov/"},
+    {"id": "ga", "name": "Georgia Courts", "url": "https://georgiacourts.gov/"},
+    {"id": "hi", "name": "Hawaii State Judiciary", "url": "https://www.courts.state.hi.us/"},
+    {"id": "id", "name": "Idaho Judicial Branch", "url": "https://isc.idaho.gov/"},
+    {"id": "il", "name": "Illinois Courts", "url": "https://www.illinoiscourts.gov/"},
+    {"id": "in", "name": "Indiana Courts", "url": "https://www.in.gov/courts/"},
+    {"id": "ia", "name": "Iowa Judicial Branch", "url": "https://www.iowacourts.gov/"},
+    {"id": "ks", "name": "Kansas Judicial Branch", "url": "https://www.kscourts.gov/"},
+    {"id": "ky", "name": "Kentucky Court of Justice", "url": "https://kycourts.gov/"},
+    {"id": "la", "name": "Louisiana Supreme Court", "url": "https://www.lasc.org/"},
+    {"id": "me", "name": "Maine Judicial Branch", "url": "https://www.courts.maine.gov/"},
+    {"id": "md", "name": "Maryland Courts", "url": "https://www.mdcourts.gov/"},
+    {"id": "ma", "name": "Massachusetts Court System", "url": "https://www.mass.gov/orgs/massachusetts-court-system"},
+    {"id": "mi", "name": "Michigan Courts", "url": "https://www.courts.michigan.gov/"},
+    {"id": "mn", "name": "Minnesota Judicial Branch", "url": "https://www.mncourts.gov/"},
+    {"id": "ms", "name": "Mississippi Judiciary", "url": "https://courts.ms.gov/"},
+    {"id": "mo", "name": "Missouri Courts", "url": "https://www.courts.mo.gov/"},
+    {"id": "mt", "name": "Montana Judicial Branch", "url": "https://courts.mt.gov/"},
+    {"id": "ne", "name": "Nebraska Judicial Branch", "url": "https://supremecourt.nebraska.gov/"},
+    {"id": "nv", "name": "Nevada Judiciary", "url": "https://nvcourts.gov/"},
+    {"id": "nh", "name": "New Hampshire Judicial Branch", "url": "https://www.courts.nh.gov/"},
+    {"id": "nj", "name": "New Jersey Courts", "url": "https://www.njcourts.gov/"},
+    {"id": "nm", "name": "New Mexico Courts", "url": "https://www.nmcourts.gov/"},
+    {"id": "ny", "name": "New York State Unified Court System", "url": "https://ww2.nycourts.gov/"},
+    {"id": "nc", "name": "North Carolina Judicial Branch", "url": "https://www.nccourts.gov/"},
+    {"id": "nd", "name": "North Dakota Court System", "url": "https://www.ndcourts.gov/"},
+    {"id": "oh", "name": "Supreme Court of Ohio", "url": "https://www.supremecourt.ohio.gov/"},
+    {"id": "ok", "name": "Oklahoma State Courts Network", "url": "https://www.oscn.net/"},
+    {"id": "or", "name": "Oregon Judicial Department", "url": "https://www.courts.oregon.gov/"},
+    {"id": "pa", "name": "Unified Judicial System of Pennsylvania", "url": "https://www.pacourts.us/"},
+    {"id": "ri", "name": "Rhode Island Judiciary", "url": "https://www.courts.ri.gov/"},
+    {"id": "sc", "name": "South Carolina Judicial Branch", "url": "https://www.sccourts.org/"},
+    {"id": "sd", "name": "South Dakota Unified Judicial System", "url": "https://ujs.sd.gov/"},
+    {"id": "tn", "name": "Tennessee Administrative Office of the Courts", "url": "https://www.tncourts.gov/"},
+    {"id": "tx", "name": "Texas Judicial Branch", "url": "https://www.txcourts.gov/"},
+    {"id": "ut", "name": "Utah State Courts", "url": "https://www.utcourts.gov/"},
+    {"id": "vt", "name": "Vermont Judiciary", "url": "https://www.vermontjudiciary.org/"},
+    {"id": "va", "name": "Virginia's Judicial System", "url": "https://www.vacourts.gov/"},
+    {"id": "wa", "name": "Washington Courts", "url": "https://www.courts.wa.gov/"},
+    {"id": "wv", "name": "West Virginia Judiciary", "url": "https://www.courtswv.gov/"},
+    {"id": "wi", "name": "Wisconsin Court System", "url": "https://www.wicourts.gov/"},
+    {"id": "wy", "name": "Wyoming Judicial Branch", "url": "https://www.courts.state.wy.us/"}
+  ],
+  "territory_judiciary_portals": [
+    {"id": "as", "name": "American Samoa Judiciary", "url": "https://www.asbar.org/"},
+    {"id": "gu", "name": "Judiciary of Guam", "url": "https://www.guamcourts.org/"},
+    {"id": "mp", "name": "Commonwealth of the Northern Mariana Islands Judiciary", "url": "https://www.nmijudiciary.gov.mp/"},
+    {"id": "pr", "name": "Poder Judicial de Puerto Rico", "url": "https://poderjudicial.pr/"},
+    {"id": "vi", "name": "Virgin Islands Judiciary", "url": "https://www.vicourts.org/"}
+  ]
+}
